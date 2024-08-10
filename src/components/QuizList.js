@@ -11,12 +11,9 @@ const QuizList = () => {
         {quizzes.map((quiz) => (
           <li key={quiz.id} className="quiz-list-item">
             <span className="quiz-list-title">{quiz.title}</span>
-            <button 
-              className="start-quiz-button" 
-              onClick={() => window.location.href = `/quiz/${quiz.id}`}
-            >
+            <Link to={`/quiz/${quiz.id}`} className="start-quiz-button">
               Start Quiz
-            </button>
+            </Link>
           </li>
         ))}
       </ul>
